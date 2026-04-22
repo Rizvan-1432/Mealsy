@@ -1,0 +1,288 @@
+.edit-profile-page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1215px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+.edit-profile-page__meta {
+  margin: 0 0 10px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+
+.edit-profile-page__panel {
+  box-sizing: border-box;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  padding: 22px 28px 36px;
+}
+
+.edit-profile-page__breadcrumbs {
+  margin: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.edit-profile-page__breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.edit-profile-page__title {
+  margin: 18px 0 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: #1f1f1f;
+}
+
+.edit-profile-page__form {
+  margin-top: 0;
+}
+
+.edit-profile-page__avatar-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.edit-profile-page__avatar {
+  flex-shrink: 0;
+  width: 112px;
+  height: 112px;
+  border-radius: 10px;
+  background-color: #6dbb64;
+  color: #ffffff;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 112px;
+  text-align: center;
+}
+
+.edit-profile-page__avatar-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding-top: 6px;
+}
+
+.edit-profile-page__avatar-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.edit-profile-page__avatar-upload {
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6dbb64;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.edit-profile-page__avatar-upload:hover {
+  color: #5da855;
+}
+
+.edit-profile-page__avatar-hint {
+  margin: 0;
+  max-width: 22rem;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #8a8a8a;
+}
+
+.edit-profile-page__block {
+  margin-top: 40px;
+}
+
+.edit-profile-page__row {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.edit-profile-page__picker-cell {
+  min-width: 0;
+}
+
+.edit-profile-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+}
+
+.edit-profile-page__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.edit-profile-page__req {
+  color: #e53935;
+  font-weight: 700;
+}
+
+.edit-profile-page__field input,
+.edit-profile-page__field select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+.edit-profile-page__field input:disabled {
+  background-color: #f3f3f3;
+  color: #6a6a6a;
+  cursor: not-allowed;
+}
+
+.edit-profile-page__field select {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a7a7a' d='M1 1.5L6 6.5l5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+.edit-profile-page__field input:focus,
+.edit-profile-page__field select:focus {
+  outline: none;
+  border-color: #6dbb64;
+  box-shadow: 0 0 0 3px rgba(109, 187, 100, 0.2);
+}
+
+.edit-profile-page__privacy {
+  margin: 14px 0 0;
+  max-width: 52rem;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+
+.edit-profile-page__inline-link {
+  color: #4f9e48;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.edit-profile-page__inline-link:hover {
+  color: #3d8a37;
+}
+
+.edit-profile-page__password-block {
+  margin-top: 40px;
+}
+
+.edit-profile-page__subheading {
+  margin: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.edit-profile-page__password-hint {
+  margin: 8px 0 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.edit-profile-page__password-block .edit-profile-page__row {
+  margin-top: 16px;
+}
+
+.edit-profile-page__actions {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.edit-profile-page__save {
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4edd2;
+  color: #2d4a32;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.edit-profile-page__save:hover {
+  background-color: #c5e4c2;
+}
+
+.edit-profile-page__logout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border: 2px solid #6dbb64;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #6dbb64;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.edit-profile-page__logout:hover {
+  background-color: #f4faf3;
+  color: #5da855;
+  border-color: #5da855;
+}
+
+@media (max-width: 720px) {
+  .edit-profile-page__row {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-profile-page__avatar-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edit-profile-page__avatar-actions {
+    align-items: center;
+  }
+}

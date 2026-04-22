@@ -1,24 +1,6 @@
 import fishCardImg from "../../../assets/img/Fish_1.png";
+import { SPRAVOCHNIK_FISH_ITEMS } from "../../data/spravochnikFish";
 import "./SpravochnikPage.css";
-
-const FISH_ITEMS = [
-  "Балу",
-  "Барбуля",
-  "Креветки",
-  "Форель",
-  "Дорада",
-  "Ерш",
-  "Икра форели",
-  "Икра кеты",
-  "Кальмары",
-  "Камбала",
-  "Карп",
-  "Кефаль",
-  "Килька",
-  "Корюшка",
-  "Крабовое мясо",
-  "Крев",
-] as const;
 
 export function SpravochnikPage() {
   return (
@@ -37,19 +19,19 @@ export function SpravochnikPage() {
         </h2>
 
         <ul className="spravochnik-page__grid">
-          {FISH_ITEMS.map((name) => (
-            <li key={name} className="spravochnik-page__card">
-              <a href="/spravochnik" className="spravochnik-page__card-link">
-                <img src={fishCardImg} alt={name} className="spravochnik-page__card-img" />
-                <span className="spravochnik-page__card-name">{name}</span>
-                <span className="spravochnik-page__meta">Белки: 16 г</span>
-                <span className="spravochnik-page__meta">Жиры: 8 г</span>
-                <span className="spravochnik-page__meta">Углеводы: 0 г</span>
-                <span className="spravochnik-page__meta">Ккал: 120</span>
+          {SPRAVOCHNIK_FISH_ITEMS.map((item) => (
+            <li key={item.slug} className="spravochnik-page__card">
+              <a href={`/spravochnik/${item.slug}`} className="spravochnik-page__card-link">
+                <img src={fishCardImg} alt={item.name} className="spravochnik-page__card-img" />
+                <span className="spravochnik-page__card-name">{item.name}</span>
+                <span className="spravochnik-page__meta">Белки: {item.proteins} г</span>
+                <span className="spravochnik-page__meta">Жиры: {item.fats} г</span>
+                <span className="spravochnik-page__meta">Углеводы: {item.carbs} г</span>
+                <span className="spravochnik-page__meta">Ккал: {item.kcal}</span>
               </a>
-              <button type="button" className="spravochnik-page__btn">
+              <a href={`/spravochnik/${item.slug}`} className="spravochnik-page__btn">
                 Посмотреть
-              </button>
+              </a>
             </li>
           ))}
         </ul>

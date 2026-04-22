@@ -1,0 +1,180 @@
+.birthday-picker {
+  position: relative;
+  min-width: 0;
+}
+
+.birthday-picker__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+}
+
+.birthday-picker__label-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.birthday-picker__input-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.birthday-picker__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  padding: 0 48px 0 14px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+.birthday-picker__input::placeholder {
+  color: #b8b8b8;
+}
+
+.birthday-picker__input:focus {
+  outline: none;
+  border-color: #6dbb64;
+  box-shadow: 0 0 0 3px rgba(109, 187, 100, 0.2);
+}
+
+.birthday-picker__icon-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6dbb64;
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.birthday-picker__icon-btn:hover {
+  background-color: rgba(109, 187, 100, 0.12);
+  color: #5da855;
+}
+
+.birthday-picker__icon-svg {
+  display: block;
+}
+
+.birthday-picker__popover {
+  position: absolute;
+  z-index: 40;
+  left: 0;
+  top: calc(100% + 8px);
+  width: min(100%, 320px);
+  box-sizing: border-box;
+  padding: 14px 14px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-picker__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.birthday-picker__month {
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f1f1f;
+  text-align: center;
+  flex: 1;
+}
+
+.birthday-picker__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #6dbb64;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.birthday-picker__nav:hover {
+  background-color: rgba(109, 187, 100, 0.12);
+}
+
+.birthday-picker__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px 0;
+  margin-bottom: 6px;
+}
+
+.birthday-picker__weekday {
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #b0b0b0;
+  text-align: center;
+}
+
+.birthday-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.birthday-picker__day {
+  aspect-ratio: 1;
+  max-height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2f2f2f;
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.birthday-picker__day:hover:not(.birthday-picker__day--selected) {
+  background-color: #f0f7ef;
+}
+
+.birthday-picker__day--muted {
+  color: #d0d0d0;
+}
+
+.birthday-picker__day--selected {
+  background-color: #6dbb64;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.birthday-picker__day--selected:hover {
+  background-color: #5da855;
+  color: #ffffff;
+}

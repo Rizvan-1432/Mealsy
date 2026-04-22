@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import weekRecipeImg from "../../../assets/img/image_8.png";
+import { clearSessionUser, getSessionUser, SESSION_STORAGE_KEY } from "../../auth/session";
 import "./Header.css";
 
 function SearchIcon() {
@@ -26,7 +27,21 @@ function SearchIcon() {
 
 export function Header() {
   const [isRecipesMenuOpen, setIsRecipesMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => typeof window !== "undefined" && Boolean(getSessionUser()));
   const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setIsLoggedIn(Boolean(getSessionUser()));
+
+    function handleStorage(event: StorageEvent) {
+      if (event.key === SESSION_STORAGE_KEY || event.key === null) {
+        setIsLoggedIn(Boolean(getSessionUser()));
+      }
+    }
+
+    window.addEventListener("storage", handleStorage);
+    return () => window.removeEventListener("storage", handleStorage);
+  }, []);
 
   useEffect(() => {
     function handleDocumentClick(event: MouseEvent) {
@@ -52,6 +67,11 @@ export function Header() {
 
   function handleRecipesClick() {
     setIsRecipesMenuOpen((prev) => !prev);
+  }
+
+  function handleLogout() {
+    clearSessionUser();
+    window.location.href = "/login";
   }
 
   return (
@@ -93,9 +113,15 @@ export function Header() {
         </div>
 
         <div className="header__actions">
-          <a className="header__login" href="/login">
-            Войти
-          </a>
+          {isLoggedIn ? (
+            <button className="header__login" type="button" onClick={handleLogout}>
+              Выйти
+            </button>
+          ) : (
+            <a className="header__login" href="/login">
+              Войти
+            </a>
+          )}
         </div>
       </div>
 

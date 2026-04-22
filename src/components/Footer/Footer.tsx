@@ -88,7 +88,7 @@ export function Footer() {
             <a className="footer__link" href="/spravochnik">
               Справочник
             </a>
-            <a className="footer__link" href="/profile">
+            <a className="footer__link" href="/profile/edit">
               Мой профиль
             </a>
           </nav>

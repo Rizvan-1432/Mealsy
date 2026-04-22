@@ -10,6 +10,8 @@ import { CatalogRecipesPage } from "./pages/CatalogRecipesPage/CatalogRecipesPag
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { SpravochnikPage } from "./pages/SpravochnikPage/SpravochnikPage";
+import { SpravochnikItemPage } from "./pages/SpravochnikItemPage/SpravochnikItemPage";
+import { EditProfilePage } from "./pages/EditProfilePage/EditProfilePage";
 import "./App.css";
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
   const isCatalogPage = pathname === "/catalog-recipes";
   const isLoginPage = pathname === "/login";
   const isRegisterPage = pathname === "/register";
+  const isEditProfilePage = pathname === "/profile/edit";
   const isSpravochnikPage = pathname === "/spravochnik";
+  const isSpravochnikItemPage = pathname.startsWith("/spravochnik/");
+  const spravochnikSlug = isSpravochnikItemPage ? pathname.replace("/spravochnik/", "") : "";
 
   return (
     <div className="app">
@@ -27,6 +32,13 @@ function App() {
           <RegisterPage />
         ) : isLoginPage ? (
           <LoginPage />
+        ) : isEditProfilePage ? (
+          <EditProfilePage />
+        ) : isSpravochnikItemPage ? (
+          <>
+            <SpravochnikItemPage slug={spravochnikSlug} />
+            <NewsletterSubscribeSection />
+          </>
         ) : isSpravochnikPage ? (
           <>
             <SpravochnikPage />

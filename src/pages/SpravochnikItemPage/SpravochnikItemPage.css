@@ -1,0 +1,328 @@
+.spr-item {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1215px;
+  margin: 0 auto;
+}
+
+.spr-item__eyebrow {
+  margin: 0 0 14px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #9a9a9a;
+}
+
+.spr-item__panel {
+  box-sizing: border-box;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.spr-item__breadcrumbs {
+  margin: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.spr-item__breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.spr-item__top {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.spr-item__image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.spr-item__title {
+  margin: 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #212121;
+}
+
+.spr-item__note {
+  margin: 16px 0 0;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1f1f1f;
+}
+
+.spr-item__badges {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.spr-item__badge {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 154px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  padding: 16px 14px;
+  font-family: Montserrat, system-ui, sans-serif;
+  text-align: center;
+}
+
+.spr-item__badge-label {
+  text-transform: lowercase;
+  font-size: clamp(1rem, 1.85vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.spr-item__badge-value {
+  margin-top: 14px;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.08;
+  color: #1f1f1f;
+}
+
+.spr-item__badge--mint {
+  background: #eefcea;
+  border-color: #bde6b7;
+  color: #7cbe73;
+}
+
+.spr-item__badge--pink {
+  background: #fff1ff;
+  border-color: #e8c6ed;
+  color: #de8cdd;
+}
+
+.spr-item__badge--blue {
+  background: #f1f3ff;
+  border-color: #c8cff7;
+  color: #9ca9dd;
+}
+
+.spr-item__badge--sand {
+  background: #fffeef;
+  border-color: #f3ed9f;
+  color: #d0c65a;
+}
+
+.spr-item__text-content {
+  margin-top: 100px;
+}
+
+.spr-item__paragraph {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #4f4f4f;
+}
+
+.spr-item__text-section {
+  margin-top: 56px;
+}
+
+.spr-item__section-title {
+  margin: 0 0 18px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1f1f1f;
+}
+
+.spr-item__recipes-title {
+  margin: 150px 0 12px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.spr-item__recipes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.spr-item__recipe-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.spr-item__recipe-image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.spr-item__recipe-name {
+  display: block;
+  margin-top: 6px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #2f2f2f;
+}
+
+.spr-item__more-wrap {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.spr-item__more {
+  border: none;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  background: transparent;
+  color: #7abf6e;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 36px;
+  cursor: pointer;
+}
+
+.spr-item__comments {
+  margin-top: 150px;
+  padding-top: 6px;
+}
+
+.spr-item__comments-title {
+  margin: 0 0 12px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.spr-item__comment-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 14px;
+  color: #2f2f2f;
+}
+
+.spr-item__comment-input::placeholder {
+  color: #c3cbd2;
+}
+
+.spr-item__comment-thread {
+  margin-top: 18px;
+  display: grid;
+  gap: 22px;
+}
+
+.spr-item__comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 12px;
+  color: #454545;
+}
+
+.spr-item__comment--nested {
+  margin-left: 52px;
+}
+
+.spr-item__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #eceff1;
+  border: 1px solid #d7dee4;
+}
+
+.spr-item__comment-body {
+  min-width: 0;
+}
+
+.spr-item__comment-author {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+.spr-item__comment-date {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  color: #585858;
+}
+
+.spr-item__comment p {
+  margin: 0;
+  line-height: 1.35;
+  font-size: 12px;
+  color: #3f3f3f;
+}
+
+.spr-item__comment-btn {
+  display: block;
+  margin: 24px auto 0;
+  border: none;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  background: transparent;
+  border-radius: 0;
+  padding: 8px 36px;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7abf6e;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .spr-item__top {
+    grid-template-columns: 1fr;
+  }
+
+  .spr-item__badges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .spr-item__badge {
+    min-height: 160px;
+    border-radius: 16px;
+    padding: 18px 14px;
+  }
+
+  .spr-item__badge-value {
+    margin-top: 18px;
+  }
+
+  .spr-item__recipes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
