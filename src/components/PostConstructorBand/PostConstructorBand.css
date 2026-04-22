@@ -1,0 +1,9 @@
+.post-constructor-band {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1215px;
+  height: 122px;
+  min-height: 122px;
+  margin-inline: auto;
+  flex-shrink: 0;
+}

@@ -1,0 +1,17 @@
+.after-constructor-lorem {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1215px;
+  height: 265px;
+  min-height: 265px;
+  margin: 50px auto 0;
+  padding: 20px 28px;
+  overflow-y: auto;
+  color: #4a4a4a;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.after-constructor-lorem__text {
+  margin: 0;
+}
